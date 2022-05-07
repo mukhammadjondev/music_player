@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Music🎧</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="title-img__container">
+            <h1 id="title">Ending - Isak Danielson</h1>
+            <div class="image-container">
+                <img src="image/music-1.jpg" alt="cover" id="cover">
+                <i class="fas fa-backward time-press" id="time-backward"></i>
+                <i class="fas fa-forward time-press" id="time-forward"></i>
+            </div>
+        </div>
+
+        <ul class="songs-container" id="song-container"></ul>
+
+        <div class="time">
+            <span id="start">0:00</span>
+            <div class="range-volume">
+                <button class="btn-volume" id="volume-icon">
+                    <i class="fa-solid fa-volume-high"></i>
+                </button>
+                <div class="range"> 
+                    <div class="slider-value">
+                        <span id="slide-value">100</span>
+                    </div>
+                    <div class="field">
+                        <input type="range" value="100" min="0" max="100" id="volume">
+                    </div>
+                </div>
+            </div>
+            <span class="end-wrapper">
+                <button class="accelerator" id="accelerator">2X</button>
+                <span id="end">0:00</span>
+            </span>  
+        </div>
+        <div class="progress-container" id="progress-container">
+            <div class="progress" id="progress"></div>
+        </div>
+
+        <audio src="music/music-1.mp3" id="audio"></audio>
+
+        <div class="navigation">
+            <button class="btn small" id="repeat">
+                <i class="fa-solid fa-repeat fas"></i>
+            </button>
+            <button class="btn" id="prev">
+                <i class="fas fa-backward icon__prev-next"></i>
+            </button>
+            <button class="btn big" id="play">
+                <i class="fas fa-play"></i>
+            </button>
+            <button class="btn" id="next">
+                <i class="fas fa-forward icon__prev-next"></i>
+            </button>
+            <button class="btn small" id="music-note">
+                <i class="fa-solid fa-music"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- js -->
+    <script src="main.js"></script>
+</body>
+</html>
